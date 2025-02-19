@@ -1,0 +1,45 @@
+#Wealthpage {
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Centers the grid */
+}
+
+#option-grid {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between buttons */
+    overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+    padding: 10px;
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+}
+
+.tile-btn {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    justify-content: center;
+    background: #007bff; /* Primary blue color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.tile-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.icon {
+    font-size: 24px; /* Adjust icon size */
+}
+
+.tile-text {
+    font-size: 14px;
+    margin-top: 3px; /* Text positioned 3px below icon */
+}

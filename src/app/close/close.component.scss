@@ -1,0 +1,27 @@
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+
+.slide-out {
+    transform: translateX(100px); 
+    opacity: 0;
+}

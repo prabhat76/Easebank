@@ -5,11 +5,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule, MatSidenavContainer, MatSidenav, } from '@angular/material/sidenav';
 import { Dashboard } from '../modals/dashbaord.model';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
+import { HomeComponent } from "../home/home.component";
 
 
 @Component({
   selector: 'app-dasboard',
-  imports: [CommonModule, MatSidenavModule, MatListModule, RouterModule],
+  imports: [CommonModule, MatSidenavModule, MatListModule, RouterModule, HomeComponent],
   templateUrl: './dasboard.component.html',
   styleUrl: './dasboard.component.scss'
 })
@@ -30,31 +31,37 @@ export class DasboardComponent implements OnInit {
       }
       console.log(this.customerdetails.customerOptions);
     });
-
-
-
   }
+
+
   navigateToPage(options: string) {
+  
+    let routePath = '';
     switch (options) {
-      case 'Wealth':
-        console.log('Navigating to Welath page');
-        break;
-      case 'Insurance':
-        this.router.navigate(['insurance'], { relativeTo: this.route });
-        console.log(`Navigating to ${options} page`);
-        break;
-      case 'Home':
-        console.log(`Navigating to ${options} page`);
-        this.router.navigate(['home'], { relativeTo: this.route });
-
-        break;
-      case 'Credit Cards':
-        console.log('Navigating to Credit Cards page');
-        break;
-      case 'Debit Cards':
-        console.log('Navigating to Debit Cards page');
-        break;
+        case 'Wealth':
+            console.log('Navigating to Wealth page');
+            routePath = 'wealth';
+            break;
+        case 'Insurance':
+            console.log(`Navigating to ${options} page`);
+            routePath = 'insurance';
+            break;
+        case 'Home':
+            console.log(`Navigating to ${options} page`);
+            routePath = 'home';
+            break;
+            case 'Cards':
+              console.log(`Navigating to ${options} page`);
+              routePath = 'cards';
+              break;
+        default:
+            console.warn(`No route defined for ${options}`);
+            return; // Exit if no route is found
     }
-  }
+    this.router.navigate([routePath], { relativeTo: this.route });
+}
 
+logout() {
+  console.log('Logging out');
+}
 }

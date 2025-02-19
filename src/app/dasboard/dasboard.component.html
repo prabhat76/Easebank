@@ -1,11 +1,19 @@
-<div *ngIf="customerdetails">
-   <h1 id="greet"> Welcome {{customerdetails.customerName}}</h1>
-</div>
-<div id="dashboard">
-    <ul>
-        <li *ngFor="let options of customerdetails.customerOptions" (click)="navigateToPage(options)">
-            {{options}}            
+<div id="container">
+    <div id="sidebar">
+      <h1 id="greet">Welcome {{ customerdetails.customerName }}</h1>
+      <ul>
+        <li *ngFor="let option of customerdetails.customerOptions" (click)="navigateToPage(option)">
+          {{ option }}
         </li>
-    </ul>
-</div>
-<router-outlet></router-outlet>
+      </ul>
+      <li id="logout" (click)="logout()">Logout</li>
+    </div>
+    
+    <div id="content">
+      <div class="slide-in">
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+  
+  </div>
+  
