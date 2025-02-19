@@ -1,0 +1,28 @@
+{
+    "status": "success",
+    "message": "Customer details retrieved successfully.",
+    "data": {
+      "customerId": "CUST123456",
+      "fullName": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "+1234567890",
+      "dateOfBirth": "1995-05-15",
+      "address": {
+        "street": "456 Elm St",
+        "city": "Othertown",
+        "state": "NY",
+        "zipCode": "67890"
+      },
+      "accountDetails": {
+        "accountId": "ACC987654321",
+        "accountType": "Checking",
+        "currency": "USD",
+        "balance": {
+          "amount": 1000.00,
+          "currency": "USD"
+        }
+      },
+      "createdAt": "2025-02-19T10:00:00Z",
+      "updatedAt": "2025-02-19T10:00:00Z"
+    }
+  }

@@ -1,0 +1,11 @@
+<div *ngIf="customerdetails">
+   <h1 id="greet"> Welcome {{customerdetails.customerName}}</h1>
+</div>
+<div id="dashboard">
+    <ul>
+        <li *ngFor="let options of customerdetails.customerOptions" (click)="navigateToPage(options)">
+            {{options}}            
+        </li>
+    </ul>
+</div>
+<router-outlet></router-outlet>

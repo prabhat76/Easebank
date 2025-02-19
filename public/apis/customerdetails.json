@@ -1,0 +1,34 @@
+{
+    "status": "success",
+    "data": {
+      "customerId": "123456",
+      "firstName": "Prabhat",
+      "lastName": "Kumar",
+      "email": "prabhatprabhakar8@gmail.com",
+      "phone": "7667745240",
+      "accountDetails": {
+        "accountNumber": "987654321",
+        "accountType": "Savings",
+        "balance": {
+          "currency": "USD",
+          "amount": 1500.75
+        },
+        "status": "active"
+      },
+      "options":[
+        "Home",
+        "Insurance",
+        "Loans",
+        "Wealth",
+        "mobileBanking"
+      ],
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zipCode": "12345"
+      },
+      "createdAt": "2023-01-15T10:00:00Z",
+      "updatedAt": "2023-02-19T12:00:00Z"
+    }
+  }

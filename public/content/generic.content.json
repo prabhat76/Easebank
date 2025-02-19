@@ -1,0 +1,11 @@
+{
+    "content":{
+       "greet":{
+        "greet_welcome":"Welcome to Easebank"
+       },
+       "footer":{
+            "footer_text":"© 2021 All rights reserved."
+
+       }
+    }
+}

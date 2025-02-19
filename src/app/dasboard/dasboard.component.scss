@@ -1,0 +1,44 @@
+#greet{
+    display: grid;
+    justify-content: right;
+    margin-right: 20px;
+    font-size: 30px;
+}
+#dashboard {
+  font-size:18px;;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 250px; // Fixed width for the sidebar
+  background-color: #1d5fa1; // Dark background for the sidebar
+  color: white; // White text color
+  padding: 20px; // Padding inside the sidebar
+  height: calc(100vh - 60px); // Full height minus any header if present
+  position: fixed; // Fix the sidebar to the left
+  top: 60px; // Adjust based on your header height
+  overflow-y: auto; // Allow scrolling if content overflows
+
+  ul {
+    list-style-type: none; // Remove default list styling
+    padding: 00; // Remove padding
+
+    li {
+      padding: 10px 15px; // Padding for list items
+      cursor: pointer; // Change cursor to pointer on hover
+      border-radius: 12px;
+      transition: background-color 0.3s; // Smooth transition for background color
+
+      &:hover {
+        background-color: #06a0f9;
+        padding: 13px; 
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.content {
+  margin-left: 270px; // Space for the sidebar
+  padding: 20px; // Padding for the content area
+  background-color: #fff; // White background for the content
+  height: calc(100vh - 60px); // Full height minus any header if present
+  overflow-y: auto; // Allow scrolling if content overflows
+}
