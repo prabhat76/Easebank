@@ -1,44 +1,71 @@
-#greet{
-    display: grid;
-    justify-content: right;
-    margin-right: 20px;
-    font-size: 30px;
+#container {
+  display: flex;
+  height: 100vh;
 }
-#dashboard {
-  font-size:18px;;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  width: 250px; // Fixed width for the sidebar
-  background-color: #1d5fa1; // Dark background for the sidebar
-  color: white; // White text color
-  padding: 20px; // Padding inside the sidebar
-  height: calc(100vh - 60px); // Full height minus any header if present
-  position: fixed; // Fix the sidebar to the left
-  top: 60px; // Adjust based on your header height
-  overflow-y: auto; // Allow scrolling if content overflows
 
-  ul {
-    list-style-type: none; // Remove default list styling
-    padding: 00; // Remove padding
+#sidebar {
+  width: 250px;
+  background-color: #1f5a94;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    li {
-      padding: 10px 15px; // Padding for list items
-      cursor: pointer; // Change cursor to pointer on hover
-      border-radius: 12px;
-      transition: background-color 0.3s; // Smooth transition for background color
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
-      &:hover {
-        background-color: #06a0f9;
-        padding: 13px; 
-        border-radius: 12px;
-      }
-    }
+#sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#sidebar li:hover {
+  background-color: #14406b;
+}
+
+#logout {
+  margin-top: auto; 
+  text-align: center;
+  padding: 15px;
+  background-color: #d9534f;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logout:hover {
+  background-color: #c9302c;
+}
+
+#content {
+  flex-grow: 1;
+  padding: 20px;
+  background: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-in {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: slideFromRight 0.5s ease-in-out forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+      right: -100%;
+      opacity: 0;
+  }
+  to {
+      right: 0;
+      opacity: 1;
   }
 }
 
-.content {
-  margin-left: 270px; // Space for the sidebar
-  padding: 20px; // Padding for the content area
-  background-color: #fff; // White background for the content
-  height: calc(100vh - 60px); // Full height minus any header if present
-  overflow-y: auto; // Allow scrolling if content overflows
-}
