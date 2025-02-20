@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-
+  private API_URL = 'http://localhost:9090/api/customers';
   constructor(private http:HttpClient) { }
 
   getCustomerDetails(): Observable<any> {
@@ -15,5 +15,10 @@ export class ApiService {
 
   getDashbaordcontent(): Observable<any> {
     return this.http.get('content/generic.content.json');
+  }
+
+  login(): Observable<any[]> {
+    // Example update in your ApiService:
+return this.http.get<any[]>(this.API_URL);
   }
 }

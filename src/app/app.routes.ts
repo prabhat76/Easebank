@@ -6,9 +6,10 @@ import { CardComponent } from './card/card.component';
 import { WealthDasboardComponent } from './wealth-dasboard/wealth-dasboard.component';
 import path from 'path';
 import { GenericPageComponent } from './generic-page/generic-page.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'dasboard', pathMatch: 'full' },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     { 
         path: 'dasboard', 
         component: DasboardComponent, 
@@ -25,6 +26,6 @@ export const routes: Routes = [
             
         ]
     },
-    {path: 'home', component: HomeComponent}
-
+    {path: 'home', component: HomeComponent},
+    {path: 'login', component: LoginComponent}
 ];
