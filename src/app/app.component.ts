@@ -18,13 +18,13 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.api.getDashbaordcontent().subscribe((data)=>{
-      this.dashboardcontent = {
-        greet : data.content.greet.greet_Welcome,
-        content : data.data.content,
-        options : data.data.options,
-        footer : data.content.footer.footer_text,
-      }
-    });
+    // this.api.getDashbaordcontent().subscribe((data)=>{
+    //   this.dashboardcontent = {
+    //     greet : data.content.greet.greet_Welcome,
+    //     content : data.data.content,
+    //     options : data.data.options,
+    //     footer : data.content.footer.footer_text,
+    //   }
+    // });
   }
 }
