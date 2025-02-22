@@ -1,0 +1,39 @@
+{
+    "riskProfile": 4,
+    "riskProfileName": "4 - Moderate to Adventurous",
+    "riskProfileDescription": [
+        "You are prepared to take a medium degree of risk with your investment in return for the prospect of improving longer term investment performance.",
+        "Short term capital protection is not important to you and you are willing to sacrifice some long term protection for the likelihood of greater returns.",
+        "A typical Moderate to Adventurous investor will be invested mainly in equities but with other assets included to provide some diversification. There may be a small amount of specialised equity within the portfolio."
+    ],
+    "allocations": [
+        {
+            "code": "Asset_Class_Government_Bonds",
+            "name": "UK Government Bonds",
+            "contributionPercentage": 1.5
+        },
+        {
+            "code": "Portfolio_309",
+            "name": "Corporate bonds",
+            "contributionPercentage": 28.5
+        },
+        {
+            "code": "Portfolio_304",
+            "name": "Overseas equity",
+            "contributionPercentage": 65.0
+        },
+        {
+            "code": "Portfolio_306",
+            "name": "Specialist equity",
+            "contributionPercentage": 5.0
+        }
+    ],
+    "score": 42.0,
+    "scoreLikelihood": {
+        "likelihoodOfHigher": "<1%",
+        "likelihoodOfLower": "34%"
+    },
+    "version": 2,
+    "dateGenerated": "2025-02-20",
+    "validationErrors": null
+}

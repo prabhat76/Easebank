@@ -1,0 +1,61 @@
+#generic_page{
+    scrollbar-width: 10px;
+    overflow-y: auto;
+}
+
+.togglebuttons {
+    display: flex;
+    bottom: 20px;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-top: 50px;
+    margin-bottom: 30px; /* Add spacing above */
+}
+
+.button {
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0767cf;
+    transform: scale(1.05);
+}
+
+.heading{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+}
+        #generic_page {
+            width: 35%;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: #f4f4f4; /* Light gray background */
+            padding: 20px;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+       .class{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+
+        }

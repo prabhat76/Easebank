@@ -4,6 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { InsuranceComponent } from './insurance/insurance.component';
 import { CardComponent } from './card/card.component';
 import { WealthDasboardComponent } from './wealth-dasboard/wealth-dasboard.component';
+import path from 'path';
+import { GenericPageComponent } from './generic-page/generic-page.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dasboard', pathMatch: 'full' },
@@ -15,10 +18,14 @@ export const routes: Routes = [
             { path: 'home', component: HomeComponent },
             { path: 'insurance', component: InsuranceComponent },
             {path: 'cards', component: CardComponent},
-            {path: 'wealth', component: WealthDasboardComponent}
+            {path: 'wealth', component: WealthDasboardComponent, 
+                children: [
+                    {path: 'generic', component: GenericPageComponent}
+                ]
+            }
             
         ]
     },
-    {path: 'home', component: HomeComponent}
-
+    {path: 'home', component: HomeComponent},
+    {path: 'login', component: LoginComponent}
 ];
