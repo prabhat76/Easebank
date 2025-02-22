@@ -4,8 +4,11 @@
         "greet_welcome":"Welcome to Easebank"
        },
        "Wealth":{
-        "wealth_title":"Wealth Management",
+        "title":"Wealth Management",
         "wealth_text":"We provide a wide range of wealth management services to help you achieve your financial goals."
+       },
+       "Banking":{
+        "title":"Banking"
        },
        "footer":{
             "footer_text":"© 2021 All rights reserved."

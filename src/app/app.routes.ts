@@ -9,7 +9,7 @@ import { GenericPageComponent } from './generic-page/generic-page.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', redirectTo: 'dasboard', pathMatch: 'full' },
     { 
         path: 'dasboard', 
         component: DasboardComponent, 

@@ -1,9 +1,15 @@
+#generic_page{
+    scrollbar-width: 10px;
+    overflow-y: auto;
+}
+
 .togglebuttons {
     display: flex;
     bottom: 20px;
     justify-content: center; /* Center buttons horizontally */
     gap: 20px; /* Space between buttons */
-    margin-top: 50px; /* Add spacing above */
+    margin-top: 50px;
+    margin-bottom: 30px; /* Add spacing above */
 }
 
 .button {

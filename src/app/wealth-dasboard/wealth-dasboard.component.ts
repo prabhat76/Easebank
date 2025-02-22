@@ -14,9 +14,18 @@ export class WealthDasboardComponent {
   options: any;
   constructor(private router: Router) {}
 
-  navigateToPage() {
-    
-        this.router.navigate(['/dasboard/wealth/generic']);
-  console.log('Navigating to generic page');
+  navigateToPage(buttonTxt:String) {
+    switch(buttonTxt){
+      case "Wealth":
+        this.router.navigate(['/dasboard/wealth/generic' , {category:buttonTxt}]);
+        console.log('Navigating to generic page');
+        break;
+        default:
+          this.router.navigate(['/dasboard/wealth/generic' , {category:buttonTxt}]);
+        console.log('Navigating to generic page');
+        break
+
+    }  
+     
 }
 }

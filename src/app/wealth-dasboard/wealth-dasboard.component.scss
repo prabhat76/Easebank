@@ -1,5 +1,6 @@
 #Wealthpage {
-    width: 50%;
+    width: 90%;
+    max-width: 600px; /* Prevent it from becoming too wide */
     display: flex;
     flex-direction: column; /* Stack close button and grid */
     align-items: center;
@@ -18,9 +19,10 @@ app-close {
     gap: 20px;
     overflow-x: auto;
     padding: 10px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center; 
 }
+
 .tile-btn {
     padding: 10px;
     display: flex;
@@ -31,8 +33,8 @@ app-close {
     color: white;
     border: none;
     border-radius: 10px;
-    width: 100px;
-    height: 80px;
+    width: 120px;
+    height: 90px;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -52,6 +54,7 @@ app-close {
     margin-top: 3px;
 }
 
+/* Animation for slide-in effect */
 .slide-in {
     position: absolute;
     top: 0;
@@ -60,7 +63,7 @@ app-close {
     height: 100%;
     background: white;
     animation: slideFromRight 0.5s ease-in-out forwards;
-  }
+}
 
 @keyframes slideFromRight {
     from {
@@ -70,5 +73,48 @@ app-close {
     to {
         right: 0;
         opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Wealthpage {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #option-grid {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tile-btn {
+        width: 100px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Wealthpage {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #option-grid {
+        gap: 10px;
+    }
+
+    .tile-btn {
+        width: 90px;
+        height: 75px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .tile-text {
+        font-size: 12px;
     }
 }

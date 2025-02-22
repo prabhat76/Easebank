@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-generic-page',
@@ -8,17 +10,40 @@ import { Router } from '@angular/router';
   styleUrl: './generic-page.component.scss'
 })
 export class GenericPageComponent {
-  constructor(private router:Router) {}
+category : any;
+  constructor(private route: ActivatedRoute,private router:Router, private location:Location, private text:ApiService) {}
+ content:{heading?:String}={};
+  ngOnInit(){
+    this.route.paramMap.subscribe(params =>{
+      this.category= params.get('category')|| 'default';
+      this.controlText();
+    })
+   
+  }
 
   toggleEvent(buttonTxt: string) {
     switch (buttonTxt) {
       case 'Proceed':
-        console.log('Button clicked: ' + buttonTxt);
-        this.router.navigate(['login']);
+        this.router.navigate(['/home']);
         break;
       case 'Cancel':
-        console.log('Button clicked: ' + buttonTxt);
-        break;}
-    
+        if (window.history.length > 1) {
+          this.location.back();
+        } else {
+          this.router.navigate(['/']); // Fallback route
+        }
+        break;
+    }
   }
+
+controlText(){
+  this.text.getGenericContent().subscribe((content)=>{
+    this.content ={
+    heading: content.content[this.category].title
+    }
+    // console.log(this.content.heading)
+  })}
+
+
+
 }

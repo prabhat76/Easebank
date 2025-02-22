@@ -21,4 +21,8 @@ export class ApiService {
     // Example update in your ApiService:
 return this.http.get<any[]>(this.API_URL);
   }
+
+  getGenericContent():Observable<any>{
+    return this.http.get("/content/generic.content.json")
+  }
 }
