@@ -6,7 +6,7 @@ import { ApiService } from './api.service';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatSidenavModule, MatSidenavContainer, MatSidenav, MatListModule, CommonModule],
+  imports: [RouterOutlet, MatSidenavModule, MatListModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,13 +18,6 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    // this.api.getDashbaordcontent().subscribe((data)=>{
-    //   this.dashboardcontent = {
-    //     greet : data.content.greet.greet_Welcome,
-    //     content : data.data.content,
-    //     options : data.data.options,
-    //     footer : data.content.footer.footer_text,
-    //   }
-    // });
+   
   }
 }

@@ -15,16 +15,23 @@ category : any;
  content:{heading?:String}={};
   ngOnInit(){
     this.route.paramMap.subscribe(params =>{
-      this.category= params.get('category')|| 'default';
+      this.category= params.get('category')|| 'error';
       this.controlText();
     })
    
   }
 
-  toggleEvent(buttonTxt: string) {
+  toggleEvent(buttonTxt: string , heading:any) {
     switch (buttonTxt) {
       case 'Proceed':
-        this.router.navigate(['/home']);
+          switch(heading){
+            case "Wealth Management":
+              this.router.navigate(['/home']);
+              break;
+            case "Funds Transfer":
+              this.router.navigate(['/funds-transfer']);
+              break;
+          }
         break;
       case 'Cancel':
         if (window.history.length > 1) {
