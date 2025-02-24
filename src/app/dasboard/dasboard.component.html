@@ -1,19 +1,27 @@
 <div id="container">
-    <div id="sidebar">
+
+  <div id="sidebar" *ngIf="!isMobile">
       <h1 id="greet">Welcome {{ customerdetails.customerName }}</h1>
       <ul>
-        <li *ngFor="let option of customerdetails.customerOptions" (click)="navigateToPage(option)">
-          {{ option }}
-        </li>
+          <li *ngFor="let option of customerdetails.customerOptions" (click)="navigateToPage(option)">
+              {{ option }}
+          </li>
       </ul>
-      <li id="logout" (click)="logout()">Logout</li>
-    </div>
-    
-    <div id="content">
+      <div id="logout" (click)="logout()">Logout</div>
+  </div>
+
+
+  <div id="bottom-nav" *ngIf="isMobile">
+      <ul>
+          <li *ngFor="let option of customerdetails.customerOptions" (click)="navigateToPage(option)">
+              {{ option }}
+          </li>
+      </ul>
+  </div>
+
+  <div id="content">
       <div class="slide-in">
           <router-outlet></router-outlet>
       </div>
   </div>
-  
-  </div>
-  
+</div>

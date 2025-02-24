@@ -1,5 +1,5 @@
 <div id="Wealthpage">
-    <!-- Close Button (Should always be at the top) -->
+
     <app-close></app-close>
 
     <!-- Option Grid Below -->
@@ -16,12 +16,11 @@
             <span class="icon">📈</span>
             <span class="tile-text">Stocks</span>
         </button>
-        <button class="tile-btn" (click)="navigateToPage('Loans')">
+        <button class="tile-btn" (click)="navigateToPage('Funds Transfer')">
             <span class="icon">🔑</span>
-            <span class="tile-text">Loans</span>
+            <span class="tile-text">Funds Transfer</span>
         </button>
     </div>
 
-    <!-- Router outlet to load child components dynamically -->
     <router-outlet></router-outlet>
 </div>

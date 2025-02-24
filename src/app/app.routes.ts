@@ -7,6 +7,7 @@ import { WealthDasboardComponent } from './wealth-dasboard/wealth-dasboard.compo
 import path from 'path';
 import { GenericPageComponent } from './generic-page/generic-page.component';
 import { LoginComponent } from './login/login.component';
+import { FundsTransferComponent } from './funds-transfer/funds-transfer.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dasboard', pathMatch: 'full' },
@@ -27,5 +28,6 @@ export const routes: Routes = [
         ]
     },
     {path: 'home', component: HomeComponent},
-    {path: 'login', component: LoginComponent}
+    {path: 'login', component: LoginComponent},
+    {path: 'funds-transfer', component:FundsTransferComponent}
 ];
