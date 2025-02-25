@@ -1,8 +1,5 @@
 <div class="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-    <!-- Header -->
     <h1 class="text-2xl font-bold text-gray-800">Digital Banking Funds Transfer</h1>
-
-    <!-- Account Details Card -->
     <div class="bg-white shadow-md rounded-lg p-6 mt-4 w-full max-w-2xl">
         <h2 class="text-lg font-semibold text-blue-700">Account Summary</h2>
         <div class="flex justify-between items-center mt-2">
@@ -15,35 +12,24 @@
         </div>
     </div>
 
-    <!-- Transfer Form -->
     <div class="bg-white shadow-md rounded-lg p-6 mt-4 w-full max-w-2xl">
         <h2 class="text-lg font-semibold text-blue-700">Transfer Funds</h2>
-
-        <!-- Transfer Type -->
         <label class="block text-gray-700 mt-2">Which type of transfer do you need to do?</label>
         <select [(ngModel)]="selectedbanktrnsfer" class="w-full mt-1 p-2 border rounded-md">
             <option value="Inside">Inside the Bank</option>
             <option value="Outside">Outside the Bank</option>
         </select>
-
-        <!-- From Account -->
         <label class="block text-gray-700 mt-2">Transfer From</label>
         <select class="w-full mt-1 p-2 border rounded-md">
             <option value="inside">Savings Account (****1234)</option>
             <option value="outside">Current Account (****5678)</option>
         </select>
-
-        <!-- Amount Input -->
         <label class="block text-gray-700 mt-2">Enter Amount</label>
         <input type="number" placeholder="Enter Amount" class="w-full mt-1 p-2 border rounded-md" />
-
-        <!-- Transfer Button -->
         <button class="w-full bg-blue-600 text-white py-2 mt-4 rounded-lg hover:bg-blue-700 transition">
             Transfer Now
         </button>
     </div>
-
-    <!-- PDF Download -->
     <button class="mt-4 bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 transition">
         Download PDF
     </button>
