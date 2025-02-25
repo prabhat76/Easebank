@@ -19,8 +19,11 @@
             <option value="Inside">Inside the Bank</option>
             <option value="Outside">Outside the Bank</option>
         </select>
+
+        <br>
+
         <label class="block text-gray-700 mt-2">Transfer From</label>
-        <select class="w-full mt-1 p-2 border rounded-md">
+        <select [(ngModel)]="selectAccount" class="w-full mt-1 p-2 border rounded-md">
             <option value="inside">Savings Account (****1234)</option>
             <option value="outside">Current Account (****5678)</option>
         </select>
